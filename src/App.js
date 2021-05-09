@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       {/* All the main content of the application goes inside here */}
       <div className="main-content">
+      
         <Home />
       </div>
     </div>

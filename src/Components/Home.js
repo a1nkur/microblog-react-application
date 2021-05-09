@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogListItem from "./BlogListItem";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([
@@ -24,14 +25,8 @@ const Home = () => {
 
   return (
     <div className="main-content">
-      {blogs.map(eachBlog => {
-        return (
-          <div className="blog-preview" id={eachBlog.id}>
-            <h3>{eachBlog.title}</h3>
-            <p>Written by - {eachBlog.author}</p>
-          </div>
-        );
-      })}
+      {/* A reusable component where a dynamic state value is passed down using props */}
+      <BlogListItem blogs={blogs} />
     </div>
   );
 };
