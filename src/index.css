@@ -1,13 +1,52 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+/* Targeting every element on the webpage */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  /* positioning */
+  display: flex;
+  /* adds internal gap between the border and the content */
+  padding: 20px;
+  /* Aligns items inside the div to be center VERTICALLY */
+  align-items: center;
+  /* sets maximum width of the div */
+  max-width: 600px;
+  /* adds 0 margin top-bottmm and auto adjust the div to be center to leave equal margin from left-right */
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+  color: #f1356d;
+}
+
+.navbar .navbar-links {
+  /* This shoots the links to right because the parent div is set to display:flex */
+  margin-left: auto;
+}
+
+.navbar a {
+  /* shifts each anchor 16px to the right */
+  margin-left: 16px;
+  text-decoration: none;
+  /* add padding to each link content */
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: #f1356d;
+}
+
+.main-content {
+  /* set max width of the main content */
+  max-width: 600px;
+  /* this sets margin of the content inside to leave gap from top and jail the main content inside the max-width  */
+  margin: 40px auto;
+  padding: 20px;
 }
