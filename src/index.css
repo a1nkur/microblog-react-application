@@ -53,7 +53,7 @@
 
 .blog-preview {
   /* top push the content inside the surrounding border */
-  padding:10px 16px;
+  padding: 10px 16px;
   /* Gap between each template */
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
@@ -67,4 +67,14 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+.blog-preview button {
+  padding: 8px;
+  margin-top: 22px;
+  color: #fff;
+  background-color: #f45d8a;
+  border: none;
+  border-radius: "2px";
+  font-size: 15px;
 }
