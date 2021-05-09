@@ -29,14 +29,22 @@ const Home = () => {
     },
   ]);
 
+  const handleDelete = idToDelete => {
+    setBlogs(blogs.filter(eachItem => eachItem.id !== idToDelete));
+  };
+
   return (
     <div className="main-content">
       {/* A reusable component where a dynamic state value is passed down using props */}
-      <BlogListItem blogs={blogs} title="All Blogs" setBlogs={setBlogs} />
+      <BlogListItem
+        blogs={blogs}
+        title="All Blogs"
+        handleDelete={handleDelete}
+      />
       <BlogListItem
         blogs={blogs.filter(eachItem => eachItem.author === "Fritz")}
         title="Fritz's blogs"
-        setBlogs={setBlogs}
+        handleDelete={handleDelete}
       />
     </div>
   );

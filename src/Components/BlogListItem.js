@@ -1,8 +1,4 @@
-const BlogListItem = ({ blogs, title, setBlogs }) => {
-  const handleDelete = idToDelete => {
-    setBlogs(blogs.filter(eachItem => eachItem.id !== idToDelete));
-  };
-
+const BlogListItem = ({ blogs, title, handleDelete }) => {
   return (
     <div className="blog-list-item">
       <h2> {title} </h2>

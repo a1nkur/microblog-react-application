@@ -1,0 +1,28 @@
+{
+    "blogs" : [
+        {
+      "author": "Magnus",
+      "id": 1,
+      "title": "Art of living",
+      "body": "lorem ipsum ...",
+    },
+    {
+      "author": "Karl",
+      "id": 2,
+      "title": "Internet Of Today",
+      "body": "lorem ipsum ...",
+    },
+    {
+      "author": "Fritz",
+      "id": 3,
+      "title": "Biowarfare",
+      "body": "lorem ipsum ...",
+    },
+    {
+      "author": "Fritz",
+      "id": 4,
+      "title": "Black Death",
+      "body": "lorem ipsum ...",
+    },
+    ]
+}
