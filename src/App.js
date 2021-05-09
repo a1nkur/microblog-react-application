@@ -11,7 +11,6 @@ function App() {
       {/* All the main content of the application goes inside here */}
       <div className="main-content">
         <Home />
-        <button onClick={(e) => handleClick("value", e)}> Click Me</button>
       </div>
     </div>
   );

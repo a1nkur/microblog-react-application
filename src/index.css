@@ -50,3 +50,21 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.blog-preview {
+  /* top push the content inside the surrounding border */
+  padding:10px 16px;
+  /* Gap between each template */
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview h3 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
