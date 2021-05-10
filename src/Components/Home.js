@@ -22,6 +22,7 @@ const Home = () => {
       .catch(err => {
         setError(err.message);
         setIsPending(false);
+        setBlogs(null);
       });
   }, []);
 
