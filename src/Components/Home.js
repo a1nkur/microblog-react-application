@@ -1,51 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogListItem from "./BlogListItem";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState([
-    {
-      author: "Magnus",
-      id: 1,
-      title: "Art of living",
-      body: "lorem ipsum ...",
-    },
-    {
-      author: "Karl",
-      id: 2,
-      title: "Internet Of Today",
-      body: "lorem ipsum ...",
-    },
-    {
-      author: "Fritz",
-      id: 3,
-      title: "Biowarfare",
-      body: "lorem ipsum ...",
-    },
-    {
-      author: "Fritz",
-      id: 4,
-      title: "Black Death",
-      body: "lorem ipsum ...",
-    },
-  ]);
+  const [blogs, setBlogs] = useState(null);
 
-  const handleDelete = idToDelete => {
-    setBlogs(blogs.filter(eachItem => eachItem.id !== idToDelete));
-  };
+
+  useEffect(() => {
+    fetch("http://localhost:3344/blogs")
+    .then((response) => response.json())
+    .then(data => setBlogs(data))
+  }, []);
 
   return (
     <div className="main-content">
       {/* A reusable component where a dynamic state value is passed down using props */}
-      <BlogListItem
+      {blogs && <BlogListItem
         blogs={blogs}
         title="All Blogs"
-        handleDelete={handleDelete}
-      />
-      <BlogListItem
-        blogs={blogs.filter(eachItem => eachItem.author === "Fritz")}
-        title="Fritz's blogs"
-        handleDelete={handleDelete}
-      />
+  
+      />}
+      
     </div>
   );
 };
