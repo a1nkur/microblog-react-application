@@ -1,3 +1,4 @@
+/* Google font : quicksand */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 
 /* Targeting every element on the webpage */
@@ -7,17 +8,19 @@
   font-family: "Quicksand", sans-serif;
   color: #333;
 }
-
+/* Styling <Navbar />  */
 .navbar {
   /* positioning */
+  /* This is to to align items even if they are block elements */
   display: flex;
   /* adds internal gap between the border and the content */
   padding: 20px;
-  /* Aligns items inside the div to be center VERTICALLY */
+  /* Aligns the residing items inside the div to be horizontally center because the parent element is display:flex */
+  /* By default they alignment start from right */
   align-items: center;
   /* sets maximum width of the div */
   max-width: 600px;
-  /* adds 0 margin top-bottmm and auto adjust the div to be center to leave equal margin from left-right */
+  /* adds 0 margin top-bottmm and auto adjust the div to be horizontally center to leave equal margin from left-right */
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -31,10 +34,12 @@
   margin-left: auto;
 }
 
+/* Style the a tags which are inline blocks. */
 .navbar a {
   /* shifts each anchor 16px to the right */
   margin-left: 16px;
-  text-decoration: none;
+  text-decoration: none;  text-decoration: none;
+
   /* add padding to each link content */
   padding: 6px;
 }
@@ -43,10 +48,11 @@
   color: #f1356d;
 }
 
+
 .main-content {
-  /* set max width of the main content */
+  /* set max width of the main content as same as navbar */
   max-width: 600px;
-  /* this sets margin of the content inside to leave gap from top and jail the main content inside the max-width  */
+  /* this sets margin of the main-content div and  leave gap from top-bottom and restrict the main content inside the max-width  */
   margin: 40px auto;
   padding: 20px;
 }
@@ -56,9 +62,11 @@
   padding: 10px 16px;
   /* Gap between each template */
   margin: 20px 0;
+  /* Give a slight border at the bottom of each template */
   border-bottom: 1px solid #fafafa;
 }
 
+/* When mouseover, the template lifts up by leaving a shadow*/
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
