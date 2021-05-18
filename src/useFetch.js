@@ -6,10 +6,10 @@ const useFetch = url => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const abortCont = new AbortController();
+    const abortCont = new AbortController(); // Create an instance of AbortController
 
     setTimeout(() => {
-      fetch(url, { signal: abortCont.signal }) //This returns a promise
+      fetch(url, { signal: abortCont.signal }) //This returns a promise, this parameter is optional. this assoicated the abort to fetch request
         .then(response => {
           if (!response.ok) {
             // checking the status of response object if it contains any error. respsonse.ok === true , if only the response object is fine af. console.log(response)
@@ -23,6 +23,7 @@ const useFetch = url => {
           setError(null);
         })
         .catch(err => {
+          // if we abort the fetch as of line 38 we get an error named ="AbortError", upon catching the error we are alerted that abort controller has been called and we should not update the state anymore. Add an if else for conditional output.
           // this catches any network error sent from the server
           if (err.name === "AbortError") {
             console.log("Fetch Aborted");
@@ -33,10 +34,11 @@ const useFetch = url => {
           }
         });
     }, 1000);
-    return () => abortCont.abort();
+    
+    return  () => abortCont.abort();
   }, [url]);
 
-  return { data, isPending, error };
+  return { data, isPending, error }; // Upon aborting, we are catching error in line 25 and updating the state as in line 30, 31.
 };
 
 export default useFetch;
@@ -65,3 +67,14 @@ export default useFetch;
 // We can handle any kind of error ->  any err sent back from the server, problem connecting to the server
 // Failed to fetch -> network error
 // However, if we manage to connect to the server and recieve the response object which is not the data we seeked ex: endpoint does not exist or request is denied, the .catch() wont be able to catch it.
+
+/* NOTE: 
+  useEffect cleanup function :
+  user -> /home -> /create; 
+  Now,  <Home /> has been unmounted but behind the scene the useEffect is still being carried on by our useFetch module which will try to update the state of unmounted component.
+  Solution: combination of cleanup function in useEffect and javascript abort controller.
+  We have to write a cleanup function in useEffect to clean the abort the fetch request when the component unmounts. 
+
+
+
+*/

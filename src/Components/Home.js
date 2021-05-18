@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
 import BlogListItem from "./BlogListItem";
 import useFetch from "../useFetch";
 
-
 const Home = () => {
-  const { data: blogs, isPending, error } = useFetch(
-    "http://localhost:3344/blogs"
-  );
+  const {
+    data: blogs,
+    isPending,
+    error,
+  } = useFetch("http://localhost:8080/blogs");
 
   return (
     <div className="main-content">

@@ -38,7 +38,7 @@
 .navbar a {
   /* shifts each anchor 16px to the right */
   margin-left: 16px;
-  text-decoration: none;  text-decoration: none;
+  text-decoration: none;
 
   /* add padding to each link content */
   padding: 6px;
@@ -47,7 +47,6 @@
 .navbar a:hover {
   color: #f1356d;
 }
-
 
 .main-content {
   /* set max width of the main content as same as navbar */
@@ -64,6 +63,7 @@
   margin: 20px 0;
   /* Give a slight border at the bottom of each template */
   border-bottom: 1px solid #fafafa;
+  
 }
 
 /* When mouseover, the template lifts up by leaving a shadow*/
@@ -78,6 +78,58 @@
 }
 
 .blog-preview button {
+  padding: 8px;
+  margin-top: 22px;
+  color: #fff;
+  background-color: #f45d8a;
+  border: none;
+  border-radius: "2px";
+  font-size: 15px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+}
+
+.blog-detail h1 {
+  margin-bottom: 3px;
+}
+
+.blog-detail h6 {
+  margin-bottom: 30px;
+}
+
+/* create new blog form */
+.create {
+  /* Giving max width lesser than the parent container size */
+  max-width: 400px;
+   /*To center the form on x axis  */
+  margin: 0 auto;
+  /* aligns text inside the div to be at center */
+  text-align: center;
+}
+.create label {
+  /* text inside should stick to left */
+  text-align: left;
+  /* changing display property so that the next element gets rendered in next line */
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  /* Sets width of input, textarea and select field to span 100% of the width of create */
+  width: 100%;
+  /* padding to push text inside */
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
   padding: 8px;
   margin-top: 22px;
   color: #fff;
