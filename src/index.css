@@ -138,3 +138,13 @@
   border-radius: "2px";
   font-size: 15px;
 }
+
+article button {
+  padding: 8px;
+  margin-top: 22px;
+  color: #fff;
+  background-color: #f45d8a;
+  border: none;
+  border-radius: "2px";
+  font-size: 15px;
+}

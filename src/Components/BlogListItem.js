@@ -11,7 +11,6 @@ const BlogListItem = ({ blogs, title }) => {
             <h3>{eachBlog.title}</h3>
             <p>Written by - {eachBlog.author}</p>
           </Link>
-          <button>delete</button>
         </div>
       ))}
     </div>

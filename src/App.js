@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // A top level component is assigned a route and when the link is clickd that component is inject into the browser.
 import Create from "./Components/Create";
 import BlogDetail from "./Components/BlogDetail";
+import NotFound from "./Components/NotFound";
 
 function App() {
   const handleClick = (val, e) => console.log(e);
@@ -30,6 +31,10 @@ function App() {
             {/* Here the id shows the route parameter which is dynamic. */}
             {/* It doesnt matter what id is it will always redirect it always redirect you to this component UNLESS you setup a hook from react-router-dom to fetch the id'ed blog */}
               <BlogDetail />
+            </Route>
+            <Route path="*"> 
+            {/* Catch any other routes, if no other routes are matched, SHOW THIS */}
+              <NotFound />
             </Route>
           </Switch>
         </div>
